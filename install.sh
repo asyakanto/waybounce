@@ -90,6 +90,10 @@ echo "# Waybounce binds" >> "$HYPR"
 add "bind = SUPER_ALT, D, exec, systemctl --user restart waybounce.service"
 add "bind = SUPER_SHIFT, D, exec, systemctl --user stop waybounce.service"
 
+hyprctl reload
+
+rm -rf "~/waybounce"
+
 # 7. Finish
 echo "=== Installation complete ==="
 echo "Start: Super Alt D"
