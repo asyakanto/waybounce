@@ -81,12 +81,12 @@ systemctl --user enable waybounce.service || true
 touch "$HYPR"
 
 add() {
+    [ -z "$1" ] && echo "" >> "$HYPR" && return
     grep -qxF "$1" "$HYPR" || echo "$1" >> "$HYPR"
 }
 
-echo "" >> "$HYPR"
-echo "# Waybounce binds" >> "$HYPR"
-
+add ""
+add "# Waybounce binds"
 add "bind = SUPER_ALT, D, exec, systemctl --user restart waybounce.service"
 add "bind = SUPER_SHIFT, D, exec, systemctl --user stop waybounce.service"
 
