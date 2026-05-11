@@ -43,6 +43,8 @@ Clone repo and run installer:
 git clone https://github.com/asyakanto/waybounce.git
 cd waybounce
 bash install.sh
+cd ..
+rm -rf waybounce
 ```
 
 The installer will:
