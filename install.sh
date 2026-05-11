@@ -92,7 +92,7 @@ add "bind = SUPER_SHIFT, D, exec, systemctl --user stop waybounce.service"
 
 hyprctl reload
 
-rm -rf "~/waybounce"
+rm -rf ~/waybounce
 
 # 7. Finish
 echo "=== Installation complete ==="
